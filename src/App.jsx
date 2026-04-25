@@ -37,7 +37,7 @@ const initialForm = {
   interest: '',
 };
 
-const COUNTDOWN_SECONDS = 10;
+const COUNTDOWN_SECONDS = 7;
 
 function easeOutExpo(value) {
   return value === 1 ? 1 : 1 - Math.pow(2, -10 * value);
