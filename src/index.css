@@ -418,6 +418,15 @@ textarea {
   background: linear-gradient(180deg, rgba(56, 189, 248, 0.08), rgba(255, 255, 255, 0.03));
 }
 
+.live-strip > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 .live-strip span {
   display: block;
   color: var(--t2);
