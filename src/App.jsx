@@ -59,6 +59,8 @@ const styles = `
     margin-top: 20px;
     perspective: 1200px;
     width: 100%;
+    position: relative;
+    z-index: 3;
   }
 
   .flip-inner {
@@ -92,12 +94,38 @@ const styles = `
   .flip-front {
     transform: rotateY(0deg) translateZ(1px);
     z-index: 2;
+    pointer-events: auto;
+    visibility: visible;
   }
 
   .flip-back {
     transform: rotateY(180deg) translateZ(1px);
     display: flex;
     align-items: stretch;
+    pointer-events: none;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .flip-inner.flipped .flip-front {
+    pointer-events: none;
+    z-index: 1;
+    visibility: hidden;
+  }
+
+  .flip-inner.flipped .flip-back {
+    pointer-events: auto;
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .flip-form-card,
+  .waitlist-form,
+  .submit-button {
+    position: relative;
+    z-index: 4;
   }
 
   .success-border-wrap {
