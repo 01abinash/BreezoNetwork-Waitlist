@@ -9,20 +9,20 @@ const statsConfig = [
 
 const features = [
   {
-    title: 'Street-level coverage',
+    title: 'Hyperlocal AQI Intelligence',
     body: 'See pollution changes block by block instead of relying on a few static city stations.',
   },
-  // {
-  //   title: 'Live sensor network',
-  //   body: 'PM2.5, PM10, CO2, humidity, temperature, and pressure flow into one real-time data layer.',
-  // },
   {
-    title: 'Community incentives',
-    body: 'Reliable contributors can earn for hosting devices and contrubuting for hyperlocal data.',
+    title: 'Open Data Marketplace',
+    body: 'Businesses, researchers, and governments can access reliable AQI datasets through a trustless, on-chain exchange system.',
   },
   {
-    title: 'Open environmental data',
-    body: 'A cleaner base layer for citizens, researchers, partners, and future city integrations.',
+    title: 'Tokenized Data Exchange',
+    body: 'Users earn blockchain-based rewards for contributing verified environmental data, creating a fair and incentivized data economy.',
+  },
+  {
+    title: 'WhatsApp chat Bot',
+    body: 'Users can simply message on WhatsApp to get real-time AQI data for their location, making Breezo accessible without needing any app or dashboard.',
   },
 ];
 
