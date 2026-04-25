@@ -633,6 +633,7 @@ textarea {
   .page-shell {
     width: min(100% - 24px, 1220px);
     padding-top: 16px;
+    padding-bottom: 56px;
   }
 
   .topbar,
@@ -644,11 +645,57 @@ textarea {
   .topbar {
     flex-direction: column;
     align-items: stretch;
+    gap: 12px;
+  }
+
+  .brand {
+    justify-content: center;
+  }
+
+  .twitter-link {
+    align-self: center;
+  }
+
+  .hero-layout {
+    gap: 20px;
+    padding-top: 28px;
   }
 
   .hero-copy h1 {
     max-width: none;
-    font-size: clamp(2.5rem, 12vw, 3.8rem);
+    font-size: clamp(2.2rem, 11vw, 3.3rem);
+  }
+
+  .hero-copy {
+    padding: 28px 20px;
+    border-radius: 28px;
+  }
+
+  .hero-text {
+    font-size: 0.98rem;
+  }
+
+  .quick-list {
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .quick-list li {
+    font-size: 0.94rem;
+  }
+
+  .waitlist-panel {
+    padding: 20px;
+    border-radius: 28px;
+  }
+
+  .panel-head h2 {
+    font-size: clamp(1.8rem, 9vw, 2.3rem);
+  }
+
+  .panel-head p {
+    max-width: none;
+    font-size: 0.95rem;
   }
 
   .stats-grid,
@@ -659,12 +706,92 @@ textarea {
   .live-strip {
     flex-direction: column;
     align-items: stretch;
+    padding: 14px 16px;
+    border-radius: 18px;
   }
 
   .live-cta,
   .secondary-button,
   .primary-button {
     width: 100%;
+  }
+
+  .field-grid {
+    gap: 14px;
+  }
+
+  .field label {
+    font-size: 0.88rem;
+  }
+
+  input,
+  textarea {
+    padding: 14px 14px;
+  }
+
+  .submit-button {
+    min-height: 50px;
+  }
+
+  .success-card {
+    padding: 18px;
+  }
+
+  .success-card h3 {
+    font-size: clamp(1.5rem, 8vw, 2rem);
+  }
+
+  .feature-section {
+    padding-top: 72px;
+    padding-bottom: 24px;
+  }
+
+  .section-copy h2 {
+    font-size: clamp(1.7rem, 9vw, 2.3rem);
+  }
+
+  .feature-grid {
+    gap: 16px;
+  }
+
+  .feature-card {
+    min-height: 0;
+    padding: 20px;
+    border-radius: 22px;
+  }
+
+  .feature-card h3 {
+    font-size: 1.12rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .page-shell {
+    width: min(100% - 16px, 1220px);
+  }
+
+  .topbar,
+  .hero-copy,
+  .waitlist-panel {
+    padding: 16px;
+  }
+
+  .brand {
+    gap: 10px;
+    font-size: 0.96rem;
+  }
+
+  .brand-logo {
+    width: 36px;
+    height: 44px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2rem, 10vw, 2.8rem);
+  }
+
+  .live-strip strong {
+    font-size: 1.5rem;
   }
 }
 

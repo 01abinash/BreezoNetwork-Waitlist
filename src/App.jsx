@@ -187,6 +187,43 @@ const styles = `
       transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1) !important;
     }
   }
+
+  @media (max-width: 720px) {
+    .flip-inner {
+      min-height: 620px;
+    }
+
+    .flip-front,
+    .flip-back {
+      height: 100%;
+      min-height: 620px;
+    }
+
+    .flip-form-card {
+      height: 100%;
+      padding: 18px;
+    }
+
+    .flip-success-card,
+    .success-border-wrap,
+    .success-inner-card {
+      min-height: 620px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .flip-inner {
+      min-height: 660px;
+    }
+
+    .flip-front,
+    .flip-back,
+    .flip-success-card,
+    .success-border-wrap,
+    .success-inner-card {
+      min-height: 660px;
+    }
+  }
 `;
 
 function CountdownBorderCard({ countdown, totalSeconds, children }) {
