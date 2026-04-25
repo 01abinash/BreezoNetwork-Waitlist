@@ -231,27 +231,25 @@ export default function App() {
     try {
       const email = form.email.trim().toLowerCase();
 
-      const { data: existingEntry, error: existingEntryError } = await supabase
-        .from(waitlistTable)
-        .select('id')
-        .eq('email', email)
-        .limit(1);
+      // const { data: existingEntry, error: existingEntryError } = await supabase
+      //   .from(waitlistTable)
+      //   .select('id')
+      //   .eq('email', email)
+      //   .limit(1);
 
-      if (existingEntryError) {
-        throw existingEntryError;
-      }
+      // if (existingEntryError) {
+      //   throw existingEntryError;
+      // }
 
-      if (existingEntry?.length) {
-        throw new Error('duplicate_email');
-      }
+      // if (existingEntry?.length) {
+      //   throw new Error('duplicate_email');
+      // }
 
       const payload = {
         id: crypto.randomUUID(),
         name: form.name.trim(),
         email,
         location: form.location.trim(),
-        organization: form.organization.trim() || null,
-        role: form.role.trim() || null,
         twitter: form.twitter.trim() || null,
         telegram: form.telegram.trim() || null,
         interest: form.interest.trim() || null,
@@ -369,11 +367,12 @@ export default function App() {
 
           {successData ? (
             <div className="success-card" role="status" aria-live="polite">
-              <span className="success-kicker mono">Saved to database</span>
-              <h3>Welcome, {successData.name}.</h3>
+              <span className="success-kicker mono">Thanks! You’ve been added.</span>
+              <h3>Welcome, {successData.name}!</h3>
               <p>
-                Your spot number is <strong>#{successData.spot}</strong>. We&apos;ll reach out at{' '}
-                <strong>{successData.email}</strong> when the next Breezo rollout opens.
+                You’ve secured early access to BREEZO NETWORK
+                <br />
+                Stay tuned — we’ll notify you when we launch.
               </p>
               <button
                 type="button"
